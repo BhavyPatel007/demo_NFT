@@ -17,12 +17,16 @@ function App() {
           });
       } else {
         alert("install metamask extension!!");
+        window.open(
+          "https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en",
+          "_blank"
+        );
       }
     }
   };
 
   useEffect(() => {
-    if (window.ethereum.selectedAddress) {
+    if (window?.ethereum?.selectedAddress) {
       const options = {
         method: "GET",
         headers: { accept: "application/json" },
