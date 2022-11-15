@@ -31,7 +31,7 @@ const Home = () => {
 
   useEffect(() => {
     if (window) {
-      if (getETH.length) {
+      if (getETH && getETH.length) {
         const options = {
           method: "GET",
           headers: { accept: "application/json" },
@@ -51,7 +51,7 @@ const Home = () => {
     if (window.ethereum?.selectedAddress) {
       setConnectWallet(getETH);
     } else {
-    //   localStorage.setItem("eth", "");
+      //   localStorage.setItem("eth", "");
       setConnectWallet("");
     }
   }, []);
